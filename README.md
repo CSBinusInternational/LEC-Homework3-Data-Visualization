@@ -1,6 +1,6 @@
 # Data Visualization - L1BC
 
-Live link: -
+Live link: https://vincentyono.github.io/LEC-Homework3-Data-Visualization/
 
 - Name: Vincent Yono
 - Student ID: 2502009583
