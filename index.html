@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Data Visualization - Titanic</title>
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="title">Survived and Dead - Pie chart</h2>
+        <div class="definition">
+          <div class="definition-survived"></div>
+          <div class="definition-dead"></div>
+        </div>
+        <div class="pie-chart" style="background: conic-gradient(#BD1A2A 38.1971%, #202021 38.1971%);">
+          <div class="pie-chart-survived">Survived<br />38.1971%</div>
+          <div class="pie-chart-dead">Dead<br/>61.8029%</div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="title">Survived and Dead - Bar chart</h2>
+        <div class="chart-wrap">
+        <div class="grid">
+          <p class="survived-and-dead-minimum">0%</p>
+          <p class="survived-and-dead-maximum">100%</p>
+          <div class="group">
+            <div class="bar" style="--bar-value: 38.1971%; --bar-color: #BD1A2A" data-name="Survived 38.1971%" title="500"></div>
+          </div>
+          <div class="group">
+            <div class="bar" style="--bar-value: 61.8029%; --bar-color: #202021" data-name="Dead 61.8029%" title="809"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="title">Gender - Pie chart</h2>
+      <div class="definition">
+        <div class="definition-male"></div>
+        <div class="definition-female"></div>
+      </div>
+      <div class="pie-chart" style="background: conic-gradient(#2768a4 64.4003%, #B85887 35.5997%);">
+        <div class="pie-chart-male">Male<br />38.1971%</div>
+        <div class="pie-chart-female">Female<br/>61.8029%</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="title">Demographic</h2>
+        <div class="chart-wrap">
+          <div class="grid">
+            <div class="gender-minimum">0</div>
+            <div class="gender-maximum">250</div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:17.2%; --bar-color: #2768a4;" data-name="0-9 male" title="43"></div>
+              <div class="bar female" style="--bar-value:15.6%; --bar-color: #B85887;" data-name="0-9 female" title="39"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:31.6%; --bar-color: #2768a4;" data-name="10-19 male" title="79"></div>
+              <div class="bar female" style="--bar-value:25.6%; --bar-color: #B85887;" data-name="10-19 female" title="64"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:91.6%; --bar-color: #2768a4;" data-name="20-29 male" title="229"></div>
+              <div class="bar female" style="--bar-value:46%; --bar-color: #B85887;" data-name="20-29 female" title="115"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:58.4%; --bar-color: #2768a4;" data-name="30-39 male" title="146"></div>
+              <div class="bar female" style="--bar-value:34.4%; --bar-color: #B85887;" data-name="30-39 female" title="86"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:35.6%; --bar-color: #2768a4;" data-name="40-49 male" title="89"></div>
+              <div class="bar female" style="--bar-value:18.4%; --bar-color: #B85887;" data-name="40-49 female" title="46"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:17.2%; --bar-color: #2768a4;" data-name="50-59 male" title="43"></div>
+              <div class="bar female" style="--bar-value:10.8%; --bar-color: #B85887;" data-name="50-59 female" title="27"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:8.8%; --bar-color: #2768a4;" data-name="60-69 male" title="22"></div>
+              <div class="bar female" style="--bar-value:4%; --bar-color: #B85887;" data-name="60-69 female" title="10"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:2.4%; --bar-color: #2768a4;" data-name="70-79 male" title="6"></div>
+              <div class="bar female" style="--bar-value:0.4%; --bar-color: #B85887;" data-name="70-79 female" title="1"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:0.4%; --bar-color: #2768a4;" data-name="80-89 male" title="1"></div>
+              <div class="bar female" style="--bar-value:0%; --bar-color: #B85887;" data-name="80-89 male" title="0"></div>
+            </div>
+            <div class="group">
+              <div class="bar male" style="--bar-value:74%; --bar-color: #2768a4;" data-name="null male" title="185"></div>
+              <div class="bar female" style="--bar-value:31.2%; --bar-color: #B85887;" data-name="null female" title="78"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="title">Embarked - Pie chart</h2>
+      <div class="definition">
+        <div class="definition-s"></div>
+        <div class="definition-c"></div>
+        <div class="definition-q"></div>
+        <div class="definition-null"></div>
+      </div>
+      <div class="pie-chart" style="background: conic-gradient(#fff05a 251.3664deg, #ff9b85 251.3664deg 325.62deg, #ffaa5a 325.62deg 359.4456deg, #f0f0f0 359.359deg);">
+        <div class="pie-chart-s">S<br />69.824%</div>
+        <div class="pie-chart-c">C<br/>20.626%</div>
+        <div class="pie-chart-q">Q<br/>9.396%</div>
+      </div>
+    </div>
+  </body>
+</html>

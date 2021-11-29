@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@body-background-color: #dddddd;
+
+@card-background-color: #f0f0f0;
+@card-width: 90vw;
+@card-height: 80vh;
+@card-border-radius: 5px;
+@card-margin-top: 1rem;
+@card-font-size: 2em;
+
+@pie-chart-size: 60vh;
+@pie-chart-radius: 100%;
+@pie-chart-color: #f0f0f0;
+
+@grid-color: #424242;
+
+@bar-thickness: 35px;
+@bar-spacing: 2px;
+@bar-rounded: 5px;
+
+@color-palette-width: 15px;
+@color-palette-height: 15px;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: @body-background-color;
+}
+
+.card {
+  background: @card-background-color;
+  width: @card-width;
+  height: auto;
+  border-radius: @card-border-radius;
+  margin-top: @card-margin-top;
+  .title {
+    font-size: @card-font-size;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+.pie-chart {
+  max-width: @pie-chart-size;
+  height: @pie-chart-size;
+  border-radius: @pie-chart-radius;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.pie-chart-survived {
+  position: relative;
+  top: 40%;
+  left: 60%;
+  color: @pie-chart-color;
+}
+.pie-chart-dead {
+  position: relative;
+  top: 50%;
+  left: 25%;
+  color: @pie-chart-color;
+}
+.pie-chart-male {
+  position: relative;
+  top: 50%;
+  left: 60%;
+  color: @pie-chart-color;
+}
+.pie-chart-female {
+  position: relative;
+  top: 35%;
+  left: 25%;
+  color: @pie-chart-color;
+}
+
+.grid {
+  position: relative;
+  margin: auto;
+  padding: 5px 0 5px 0;
+  height: 50%;
+  width: 60%;
+  border-left: 2px solid @grid-color;
+  border-bottom: 2px solid @grid-color;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 19.5%,
+    fadeout(@grid-color, 30%) 20%
+  );
+}
+
+.bar {
+  width: var(--bar-value);
+  height: @bar-thickness;
+  margin: @bar-spacing 0;
+  background-color: var(--bar-color);
+  border-radius: 0 @bar-rounded @bar-rounded 0;
+  &::after {
+    font-size: 1em;
+    font-weight: bold;
+    content: attr(data-name);
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 100%;
+  }
+}
+
+.chart-wrap {
+  position: relative;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.group {
+  margin: 5em 0 5em 0;
+}
+
+.pie-chart-s {
+  position: relative;
+  top: 45%;
+  left: 60%;
+}
+.pie-chart-c {
+  position: relative;
+  top: 35%;
+  left: 20%;
+}
+.pie-chart-q {
+  position: relative;
+  top: 7%;
+  left: 37%;
+}
+
+.definition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definition-survived {
+  background: #bd1a2a;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    margin-left: 100%;
+    content: 'Survived';
+  }
+}
+.definition-dead {
+  position: relative;
+  background: #202021;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    position: absolute;
+    margin-left: 100%;
+    content: 'Dead';
+    left: 5px;
+  }
+}
+
+.survived-and-dead-minimum {
+  position: absolute;
+  top: 100%;
+}
+.survived-and-dead-maximum {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
+
+.definition-male {
+  background: #2768a4;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    position: relative;
+    content: 'Male';
+    margin-left: 100%;
+    left: 5px;
+  }
+}
+
+.definition-female {
+  background: #b85887;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    content: 'Female';
+    margin-left: 100%;
+  }
+}
+
+.definition-s {
+  background: #fff05a;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    position: relative;
+    content: 'S';
+    margin-left: 100%;
+    left: 5px;
+  }
+}
+.definition-c {
+  background: #ff9b85;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    position: relative;
+    content: 'C';
+    margin-left: 100%;
+    left: 5px;
+  }
+}
+.definition-q {
+  background: #ffaa5a;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    position: relative;
+    content: 'Q';
+    margin-left: 100%;
+    left: 5px;
+  }
+}
+.definition-null {
+  background: #f0f0f0;
+  width: @color-palette-width;
+  height: @color-palette-height;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+  &::after {
+    position: relative;
+    content: 'Null';
+    margin-left: 100%;
+    left: 5px;
+  }
+}
+
+.gender-minimum {
+  position: absolute;
+  top: 100%;
+}
+.gender-maximum {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}

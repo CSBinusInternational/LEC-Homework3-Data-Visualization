@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dddddd;
+}
+.card {
+  background: #f0f0f0;
+  width: 90vw;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.card .title {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.pie-chart {
+  max-width: 60vh;
+  height: 60vh;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.pie-chart-survived {
+  position: relative;
+  top: 40%;
+  left: 60%;
+  color: #f0f0f0;
+}
+.pie-chart-dead {
+  position: relative;
+  top: 50%;
+  left: 25%;
+  color: #f0f0f0;
+}
+.pie-chart-male {
+  position: relative;
+  top: 50%;
+  left: 60%;
+  color: #f0f0f0;
+}
+.pie-chart-female {
+  position: relative;
+  top: 35%;
+  left: 25%;
+  color: #f0f0f0;
+}
+.grid {
+  position: relative;
+  margin: auto;
+  padding: 5px 0 5px 0;
+  height: 50%;
+  width: 60%;
+  border-left: 2px solid #424242;
+  border-bottom: 2px solid #424242;
+  background: repeating-linear-gradient(90deg, transparent, transparent 19.5%, rgba(66, 66, 66, 0.7) 20%);
+}
+.bar {
+  width: var(--bar-value);
+  height: 35px;
+  margin: 2px 0;
+  background-color: var(--bar-color);
+  border-radius: 0 5px 5px 0;
+}
+.bar::after {
+  font-size: 1em;
+  font-weight: bold;
+  content: attr(data-name);
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  margin-left: 100%;
+}
+.chart-wrap {
+  position: relative;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.group {
+  margin: 5em 0 5em 0;
+}
+.pie-chart-s {
+  position: relative;
+  top: 45%;
+  left: 60%;
+}
+.pie-chart-c {
+  position: relative;
+  top: 35%;
+  left: 20%;
+}
+.pie-chart-q {
+  position: relative;
+  top: 7%;
+  left: 37%;
+}
+.definition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.definition-survived {
+  background: #bd1a2a;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-survived::after {
+  margin-left: 100%;
+  content: 'Survived';
+}
+.definition-dead {
+  position: relative;
+  background: #202021;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-dead::after {
+  position: absolute;
+  margin-left: 100%;
+  content: 'Dead';
+  left: 5px;
+}
+.survived-and-dead-minimum {
+  position: absolute;
+  top: 100%;
+}
+.survived-and-dead-maximum {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
+.definition-male {
+  background: #2768a4;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-male::after {
+  position: relative;
+  content: 'Male';
+  margin-left: 100%;
+  left: 5px;
+}
+.definition-female {
+  background: #b85887;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-female::after {
+  content: 'Female';
+  margin-left: 100%;
+}
+.definition-s {
+  background: #fff05a;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-s::after {
+  position: relative;
+  content: 'S';
+  margin-left: 100%;
+  left: 5px;
+}
+.definition-c {
+  background: #ff9b85;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-c::after {
+  position: relative;
+  content: 'C';
+  margin-left: 100%;
+  left: 5px;
+}
+.definition-q {
+  background: #ffaa5a;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-q::after {
+  position: relative;
+  content: 'Q';
+  margin-left: 100%;
+  left: 5px;
+}
+.definition-null {
+  background: #f0f0f0;
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+  border: 0.5px solid #424242;
+}
+.definition-null::after {
+  position: relative;
+  content: 'Null';
+  margin-left: 100%;
+  left: 5px;
+}
+.gender-minimum {
+  position: absolute;
+  top: 100%;
+}
+.gender-maximum {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
